@@ -10,8 +10,10 @@ class colour:
   blue=1
   green=2
   none=-1
+  @staticmethod
   def randomcol():
     return [colour.red,colour.blue,colour.green][randint(0,2)]
+  @staticmethod
   def gethex(col):
     return ["#ff0000","#0000ff","#00ff00"][col]#{colour.red:"#ff0000",colour.blue:"#0000ff",colour.green:"#00ff00"}[col]
 class GUI:
@@ -225,7 +227,7 @@ class tgol_frame:
     elif red>=green:
       return colour.red
     return colour.green
-#print(cpu_count())
+print(cpu_count())
 gui=GUI(100,100,800,800,cpu_count(),"B3/S23")
-#gui.mainlooper()
+gui.mainlooper()
 #print(colour.gethex(colour.blue))
