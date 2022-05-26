@@ -3,7 +3,6 @@ from time import time,sleep
 from os import path
 from multiprocessing import Pool,cpu_count
 from random import random,randint
-import gc
 from enum import Enum
 class colour:
   red=0
@@ -227,7 +226,9 @@ class tgol_frame:
     elif red>=green:
       return colour.red
     return colour.green
-print(cpu_count())
-gui=GUI(100,100,800,800,cpu_count(),"B3/S23")
-gui.mainlooper()
+
+if __name__ == "__main__":
+  print(cpu_count())
+  gui=GUI(100,100,800,800,cpu_count(),"B3/S23")
+  gui.mainlooper()
 #print(colour.gethex(colour.blue))
